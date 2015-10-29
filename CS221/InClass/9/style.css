@@ -1,0 +1,19 @@
+
+ol{
+	list-style-type:upper-roman;
+}
+ol ol{
+	list-style-type:upper-aplha;
+}
+ol ol ol{
+	list-style-type:decimal;
+}
+li.car{
+	color:pink;
+}
+li.midcar{
+	color:blue;
+}
+li.sportscar{
+	color:red;
+}

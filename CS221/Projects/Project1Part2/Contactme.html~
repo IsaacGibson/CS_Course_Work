@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<title>My code</title>
+	</head>
+	<body>
+		<h1>My info</h1>
+		<hr/>
+		<table>
+			<tr>
+				<td>Enter Your Name: </td>
+			</tr>
+			<tr>
+				<td><input type="text" name="username" required></td>
+			</tr>
+			<tr>
+				<td>Phone: </td>
+			</tr>
+			<tr>
+				<td><input type="text" name="phone" required></td>
+			</tr>
+			<tr>
+				<td>Email: </td>
+			</tr>
+			<tr>
+				<td><input type="text" name="email" required></td>
+			</tr>
+			<tr>
+				<td>Message Subject: </td>
+			</tr>
+			<tr>
+				<td><datalist id="whatever">
+					<option value="Cs Course Work">&nbsp;</option>
+					<option value="Resume" >&nbsp;</option>
+					<option value="Research" >&nbsp;</option>
+					<option value="Job Position" >&nbsp;</option>
+					<option value="Consult Regarding Carbondale student life" >&nbsp;</option>
+					<option value="Consult Regarding SIU" >&nbsp;</option>
+					<option value="Consult Regarding CS" >&nbsp;</option>
+					<option value="Other">&nbsp;</option>
+				     </datalist></td>
+			</tr>
+			<tr>
+				<td><datalist id="whatever">
+					<option value="Cs Course Work">Cs Course Work</option>
+					<option value="Resume" >Resume</option>
+					<option value="Research" >Research</option>
+					<option value="Job Position" >Job Position</option>
+					<option value="Consult Regarding Carbondale student life" >Consult Regarding Carbondale student life</option>
+					<option value="Consult Regarding SIU" >Consult Regarding SIU</option>
+					<option value="Consult Regarding CS" >Consult Regarding CS</option>
+					<option value="Other">Other</option>
+				     </datalist></td>
+			</tr>
+			<tr>
+				<td>Enter Your Message: </td>
+			</tr>
+			<tr>
+				<td><textarea name="comments" rows="30" cols="90"></textarea></td>
+			</tr>
+			<tr>
+				<td><input type="checkbox" name="honors" required />E-mail a copy of this message to your own address</td>
+			</tr>
+			<tr>
+				<td><input type="submit" name="submit" value="submit" ></td>
+			</tr>
+		</table>
+	</body>
+</html>

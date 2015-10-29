@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<title>My COde</title>
+	</head>
+	
+	<body>
+		<h1> Travel expense Report </h1>
+		
+		<h2>Traveller Information</h2>
+		<form action="demo_form.asp" >
+		<table>
+			
+			<tr>
+				<td>Employee ID: </td>
+				<td><input type="text" name="ID" required></td>
+				<td>Email: </td>
+				<td><input type="text" name="Email" required></td>
+			</tr>
+			<tr>
+				<td>Last Name: </td>
+				<td><input type="text" name="LName" required></td>
+				<td>First Name: </td>
+				<td><input type="text" name="FName" required></td>
+			</tr>
+			<tr>
+				<td>Address: </td>
+				<td colspan="3"><input type="text" name="Address" size ="60" required></td>
+			</tr>
+			<tr>
+				<td>City: </td>
+				<td><input type="text" name="City" required></td>
+				<td>State: </td>
+				<td><input type="text" name="State" required></td>
+			</tr>
+			<tr>
+				<td>Zip: </td>
+				<td><input type="text" name="ID" size="6" required></td>
+				<td>Phone: </td>
+				<td><input type="text" name="Phone" required></td>
+			</tr>
+	
+		</table>
+		
+		<h2>Trip Information</h2>
+
+			<table>
+				<tr>
+					<td></td>
+					<td><b>Dates of Travel</b></td>
+					<td><b>Dates of Meeting</b></td>		
+				</tr>
+				<tr>
+					<td>From:</td>
+					<td><input type="date" name="Dates" ></td>
+					<td>To:</td>
+					<td><input type="date" name="To" ></td>
+				</tr>
+				<tr>
+					<td>From: </td>
+					<td><input type="date" name="Dates2" ></td>
+					<td>To: </td>
+					<td><input type="date" name="To2" ></td>
+				</tr>
+				<tr>
+					<td>Pupose: </td>
+					<td>
+						<select name="Personal" size="1" >
+						<option value="1">Professional Meeting</option>
+						<option value="2">Persentation</option>
+						<option value="3">Teaching Off-Campus</option>
+						<option value="4">Paper Poster</option>
+						<option value="5">Artistic Exhibition or Performance</option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<td>Level </td>
+					<td><input type="radio" name="level" value="R" />Regional</td>
+					<td><input type="radio" name="level2" value="S" />State</td>
+					<td><input type="radio" name="level3" value="N" />National</td>
+					<td><input type="radio" name="level4" value="I" />International</td>
+				</tr>
+				<tr>
+					<td>Description</td>
+					<td colspan ="4"><textarea name="Describe" rows="10" cols="60" ></textarea></td>
+				</tr>
+				<tr>
+					<td>Was a personal vehicle utilized? </td>
+					<td><input type="radio" name="yes" value="Y" />Yes</td>
+					<td><input type="radio" name="no" value="N" />No</td>
+				</tr>
+				<tr>
+					<td>Was a university vehicle utilized? </td>
+					<td><input type="radio" name="yes" value="Y" />Yes</td>
+					<td><input type="radio" name="no" value="N" />No</td>
+				</tr>
+			</table>
+	
+		<h2>Itinerary Information</h2>
+		<table>
+		<tr>
+			<th>Date</th>
+			<th>Departured From</th>
+			<th>Arrived At</th>
+			<th>Auto Mileage</th>
+			<th>Meals</th>
+		</tr>
+		<tr>
+			<td><input type="Text" name="whatever" size="5"></td>
+			<td><input type="Text" name="whatever" ></td>
+			<td><input type="Text" name="whatever" ></td>
+			<td><input type="Text" name="whatever" ></td>
+			<td><input type="checkbox" name="Food" value="B" />Breakfast</td>
+			<td><input type="checkbox" name="Food" value="L" />Lunch</td>
+			<td><input type="checkbox" name="Food" value="L" />Dinner</td>
+		</tr>
+		<tr>
+			<td><input type="Text" name="whatever" size="5"></td>
+			<td><input type="Text" name="whatever" ></td>
+			<td><input type="Text" name="whatever" ></td>
+			<td><input type="Text" name="whatever" ></td>
+			<td><input type="checkbox" name="Food" value="B" />Breakfast</td>
+			<td><input type="checkbox" name="Food" value="L" />Lunch</td>
+			<td><input type="checkbox" name="Food" value="L" />Dinner</td>
+		</tr>
+		<tr>
+			<td><input type="Text" name="whatever" size="5"></td>
+			<td><input type="Text" name="whatever" ></td>
+			<td><input type="Text" name="whatever" ></td>
+			<td><input type="Text" name="whatever" ></td>
+			<td><input type="checkbox" name="Food" value="B" />Breakfast</td>
+			<td><input type="checkbox" name="Food" value="L" />Lunch</td>
+			<td><input type="checkbox" name="Food" value="L" />Dinner</td>
+		</tr>
+	</table>
+	</form>
+	<hr/>
+	
+	<p><input type="submit" name="send" value="Send Report" />
+	<input type="reset" name="clear" value="Clear Form" /></p>
+	</body>
+</html>
