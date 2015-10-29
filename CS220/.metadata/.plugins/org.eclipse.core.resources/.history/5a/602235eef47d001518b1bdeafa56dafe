@@ -7,7 +7,6 @@ import java.util.LinkedList;
  *
  */
 
-//Just for practice not my work
 
 public class StackDeque{
 	public static void main(String args[]){
