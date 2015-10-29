@@ -1,9 +1,9 @@
-Assignment 5
-
+#H1 Assignment 5
+_________________________________________________________________________________________________________________________________
 Vincent Davis
-
+_______________________________________________________________________________________________________________________________________________________________
 1
-
+___________________________________________________________________________________________________________________________--______________
 You can test if the split in strings have certain properties by using two queues.
 Once you find the middle of the strings put the first half in one queue and the other in the other.
 Finally you compare if the two strings are equal if they are not then you know the word is 
@@ -11,6 +11,7 @@ not equal.
 
 2
 
+```Java
 interface DequeInterface<T>{
 	/**It's public because you need to let people have 
 	access to add ojects to the queue 	
@@ -46,3 +47,4 @@ interface DequeInterface<T>{
 	 public void clear();
 }
 
+```
