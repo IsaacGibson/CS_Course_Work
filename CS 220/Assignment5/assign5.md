@@ -14,7 +14,7 @@ not equal.
 ```Java
 interface DequeInterface<T>{
 	/**It's public because you need to let people have 
-	access to add ojects to the queue 	
+	access to add ojects to the queue
 	*/
 	 public void addToFront(T newEntry);
 	 /**It's public public because users need to add to the back
@@ -52,62 +52,47 @@ interface DequeInterface<T>{
 
 ```Java
 import java.util.Deque;
-import java.util.Iterator;
 import java.util.LinkedList;
 
 /**
  * @author Vince
  *
  */
-
-///Not my work
 public class StackDeque{
 	public static void main(String args[]){
-		 	Deque deque = new LinkedList<>();
-	        // We can add elements to the queue in various ways
-	        deque.add("Element 1 (Tail)"); // add to tail
-	        deque.addFirst("Element 2 (Head)");
-	        deque.addLast("Element 3 (Tail)");
-	        deque.push("Element 4 (Head)"); //add to head
-	        deque.offer("Element 5 (Tail)");
-	        deque.offerFirst("Element 6 (Head)");
-	        deque.offerLast("Element 7 (Tail)");
-	        
-	        System.out.println(deque + "\n");
+		Deque deque = new LinkedList<>();
 
-	        // Iterate through the queue elements.
-	        System.out.println("Standard Iterator");
-	        Iterator iterator = deque.iterator();
-	        while (iterator.hasNext()) {
-	            System.out.println("\t" + iterator.next());
+	        deque.push("Johnny");
+	        deque.push("Timmy");
+	        deque.push("Roshonda");
+	        deque.push("Felisha");
+	        if(deque.isFull()){
+			deque.removeFirst();
 	        }
-	        
-	        // Reverse order iterator
-	        Iterator reverse = deque.descendingIterator();
-	        System.out.println("Reverse Iterator");
-	        while (reverse.hasNext()) {
-	            System.out.println("\t" + reverse.next());
-	        }
-	        
-	        // Peek returns the head, without deleting it from the deque
-	        System.out.println("Peek " + deque.peek());
-	        System.out.println("After peek: " + deque);
-	        
-	        // Pop returns the head, and removes it from the deque
-	        System.out.println("Pop " + deque.pop());
-	        System.out.println("After pop: " + deque);
-	        
-	        // We can check if a specific element exists in the deque
-	        System.out.println("Contains element 3: " + deque.contains("Element 3 (Tail)"));
-	        
-	        // We can remove the first / last element.
-	        deque.removeFirst();
-	        deque.removeLast();
-	        System.out.println("Deque after removing first and last: " + deque);   
+	        System.out.println(deque + "\n");
 	    }
 		
 }
 ```
 ### 4
-
+```Java
+public void splice(QueueInterface<T> anotherQueue){
+	Node newNode = new Node(data, lastNode);
+	for(int i = 0, z = 0; i < queue.size() || z < queue.size()){
+		if (i < queue.size())
+			newNode.add(queue.get(i++), null);
+		if (z < queue.size())
+			newNode.add(queue.get(j++), null);
+	}	
+	queue = newNode;
+}
+```
 ### 5
+
+public void addToBack(T newEntry){
+	DLNode newNode = new DLNode(lastnod
+}
+
+
+
+
