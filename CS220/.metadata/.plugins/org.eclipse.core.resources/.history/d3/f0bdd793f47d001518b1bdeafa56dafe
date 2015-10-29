@@ -6,11 +6,112 @@ import java.util.LinkedList;
  * @author Vince
  *
  */
+/*
+interface DequeInterface<T>{
+	 public void addToFront(T newEntry);
+	 public void addToBack(T newEntry);
+	 public T removeFront();
+	 public T removeBack();
+	 public T getFront();
+	 public T getBack();
+	 public boolean isEmpty();
+	 public void clear();
+}*/
 
 
 public class StackDeque{
+
+	/*
+	private Node firstNode;
+	private Node lastNode;
+	private int numberOfEntries;
+	private int maxSize;
+	
+	public StackDeque(){
+		
+	}
+
+	public void addToFront(T newEntry) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void addToBack(T newEntry) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public T removeFront() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	public T removeBack() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	public T getFront() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	public T getBack() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	public boolean isEmpty() {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	public void clear() {
+		// TODO Auto-generated method stub
+		
+	}
+	private class Node<T> {
+	    private Node next;
+	    private Node previous;
+	    private T data;
+	    public Node(T data, Node next, Node previous) {
+	      this.data = data;
+	      this.next = next;
+	      this.previous = previous;
+	    }
+
+	    public Node(T data) {
+	      this(data, null, null);
+	    }
+
+	    public T getData() {
+	      return data;
+	    }
+
+	    public Node getNext() {
+	      return next;
+	    }
+
+	    public Node getPrevious() {
+	      return previous;
+	    }
+
+	    public void setData(T data) {
+	      this.data = data;
+	    }
+
+	    public void setNext(Node next) {
+	      this.next = next;
+	    }
+
+	    public void setPrevious(Node previous) {
+	      this.previous = previous;
+	    }
+
+	}*/
 	public static void main(String args[]){
 		 	Deque deque = new LinkedList<>();
+	        
 	        // We can add elements to the queue in various ways
 	        deque.add("Element 1 (Tail)"); // add to tail
 	        deque.addFirst("Element 2 (Head)");
