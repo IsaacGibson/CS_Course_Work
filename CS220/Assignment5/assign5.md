@@ -60,7 +60,7 @@ import java.util.LinkedList;
  *
  */
 
-
+///Not my work
 public class StackDeque{
 	public static void main(String args[]){
 		 	Deque deque = new LinkedList<>();
