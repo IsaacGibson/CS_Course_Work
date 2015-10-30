@@ -1,7 +1,6 @@
 # Assignment 5
 _________________________________________________________________________________________________________________________________
 Vincent Davis
-# This is Probably all wrong come check back on it Later at like 12 or 3 am
 
 ### 1
 
@@ -17,13 +16,8 @@ class QueuBase{
   //All private because it only needs to be accessed within this class
   private Node firstNode;
   private Node lastNode;
+  private T data;
 
-  //public because it's the constructor that everyone needs to access
-  public QueuBase(T data){
-    firstNode = null;
-    lastNode = null;
-    this.data = data;
-  }
 
   /**It's protected because you only want to have your child classes to
   to be able to see and have the access to add objects to the queues

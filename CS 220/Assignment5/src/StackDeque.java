@@ -18,13 +18,7 @@ class QueuBase{
 	//All private because it only needs to be accessed within this class
 	private Node firstNode;
 	private Node lastNode;
-
-  //public because it's the constructor that everyone needs to access
-  public QueuBase(T data){
-    firstNode = null;
-    lastNode = null;
-    this.data = data;
-  }
+  private T data;
 
 	/**It's protected because you only want to have your child classes to
 	to be able to see and have the access to add objects to the queues
