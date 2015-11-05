@@ -8,7 +8,7 @@ ________________________________________________________________________________
 
 
 ##2
-![GitHub Logo](/home/phantom/git_local/CS_Course_Work/CS 220/Assignment#6/IMAG0560.jpg)
+![GitHub Logo](blob/master/CS 220/Assignment%236/IMAG0560.jpg)
 ![Alt text](/home/phantom/git_local/CS_Course_Work/CS 220/Assignment#6/IMAG0560.jpg?raw=true "Pic 1")
 
 
