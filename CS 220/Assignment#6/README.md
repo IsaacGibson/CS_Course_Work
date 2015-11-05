@@ -8,7 +8,37 @@ ________________________________________________________________________________
 
 
 ##2
+Attached images
 ![GitHub Logo](IMAG0560.jpg)
-![Alt text](/home/phantom/git_local/CS_Course_Work/CS 220/Assignment#6/IMAG0560.jpg?raw=true "Pic 1")
+
+##3
+```java
+
+public class Palindrome{
+
+	public static boolean palinCheck(String stuff){
+		if(stuff.length() == 0 || stuff.length() == 1)
+			return true;
+		if(stuff.charAt(0) == stuff.charAt(stuff.length() - 1))
+			return palinCheck(stuff.substring(1, stuff.length()-1));
+		return false;
+	}
+
+	public static void main(String[] args) {
+		Scanner scan = new Scanner(System.in);
+		System.out.print("Enter a String: ");
+		String input = scan.nextLine();
+		if(palinCheck(input))
+			System.out.println(input + " is a palindrome");
+		else
+			System.out.println(input + " is not a palindrome");
+	}
+}
+
+```
+##4
+
+
+##5
 
 
