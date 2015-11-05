@@ -1,5 +1,4 @@
 import java.util.Scanner;
-
 //Vincent Davis
 //CS 220 Assignment #5
 
