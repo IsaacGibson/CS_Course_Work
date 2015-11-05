@@ -17,11 +17,15 @@ Attached images
 public class Palindrome{
 
 	public static boolean palinCheck(String stuff){
-		if(stuff.length() == 0 || stuff.length() == 1)
+		if(stuff.length() == 0 || stuff.length() == 1){
 			return true;
-		if(stuff.charAt(0) == stuff.charAt(stuff.length() - 1))
+		}
+		else if(stuff.charAt(0) == stuff.charAt(stuff.length() - 1)){
 			return palinCheck(stuff.substring(1, stuff.length()-1));
-		return false;
+		}
+		else{
+			return false;
+		}
 	}
 
 	public static void main(String[] args) {
@@ -29,9 +33,9 @@ public class Palindrome{
 		System.out.print("Enter a String: ");
 		String input = scan.nextLine();
 		if(palinCheck(input))
-			System.out.println(input + " is a palindrome");
+			System.out.println("What you put is a palindrome");
 		else
-			System.out.println(input + " is not a palindrome");
+			System.out.println("what you put is not a palindrome");
 	}
 }
 
