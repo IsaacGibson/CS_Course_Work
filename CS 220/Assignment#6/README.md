@@ -4,8 +4,7 @@
 _______________________________________________________________________________________________________________
 ##1
 
-0301013601014020246
-
+34
 
 ##2
 Attached images
@@ -41,6 +40,23 @@ public class Palindrome{
 
 ```
 ##4
+Think of logs as log base 2
+
+L(n) = L(n/2) + 1 for n >= 2
+You need a base case
+L(n) = 1 for 0<= n < 2
+L(n) = log(n) + 1
+L(r) = L(r/2) + 1
+L(r) = log(r/2) + 1 + 1
+L(r) = log(r/2) + 2
+L(r) = log(r/2) + log(4)
+L(r) = log(4r/2)
+L(r) = log(2r)
+L(r) = log(2) + log(r)
+L(r) = 1 + log(r)
+
+r > n, L(r) = 1 + log(r)
+
 
 
 ##5
