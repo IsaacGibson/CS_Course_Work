@@ -51,7 +51,7 @@ public class Assignment7<T extends Comparable<? super T>>{
 	 * 
 	 */
 	
-	//Number 5 | Need to fix
+	//Number 5 
 	public int[] search(Object[] x, Object object){
 		int[] temp = new int[x.length];
 		int oposite = 0;
