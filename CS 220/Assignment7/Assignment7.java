@@ -3,22 +3,20 @@ import java.util.Arrays;
 public class Assignment7<T extends Comparable<? super T>>{
 	private static int[] a;
 	
-	//Number 1 | Need to fix
-	public void selectionSort(int[] x) {
+	//Number 1
+	public int[] selectionSort(int[] x) {
 	    for (int i=x.length - 1; i >= 0; i--) {
 	        int maxIndex = i;      // Index of largest value
-	        for (int j=i+1; j>=0; j--) {
-	            if (x[maxIndex] > x[j]) {
-	                j = maxIndex;  // Remember index of new max
+	        for (int j=i - 1; j>=0; j--) {
+	            if (x[maxIndex] < x[j]) {
+	                maxIndex = j;  // Remember index of new max
 	            }
 	        }
-	        if (maxIndex != i) { 
-	            //...  Exchange current element with smallest remaining.
-	            int temp = x[i];
-	            x[i] = x[maxIndex];
-	            x[maxIndex] = temp;
-	        }
+	        int highest = x[maxIndex];
+	        x[maxIndex] = x[i];
+	        x[i] = highest;
 	    }
+	  return x;
 	}
 	
 	//Number 2
@@ -45,48 +43,31 @@ public class Assignment7<T extends Comparable<? super T>>{
 	 */
 	
 	
-	//Number 4 | Need to fix
-	T [] quickSort(T[] a){
-		quickSort(a, 0, a.length -1);
-		return a;
-	}
-	private void quickSort(T[] a, int low, int high){
-		int i = low; int j = high;
-		T pivot = a[low + (low + high)/2];
-		while (i <= j){
-			while(a[i].compareTo(pivot) < 0)
-				i++;
-			while(a[j].compareTo(pivot) > 0)
-				j--;
-			if (i <= j){
-				swap(a, i, j);
-				i++;
-				j--;
-			}
-			if (low < j){
-				quickSort(a, low, j);
-			}
-			if (i < high)
-				quickSort(a, i, high);
-		}
-	}
-	private void swap(T[] a, int i, int j){
-		T temp = a[i];
-		a[i] = a[j];
-		a[j] = temp;
-	}
+	//Number 4 
+	/**
+	 * When the pivot is either the first element or the last element
+	 * and if the array is already sorted {1,2,3,4,5,6,7,8,9,20}
+	 * Makes the complexity O(n^2)
+	 * 
+	 */
 	
 	//Number 5 | Need to fix
-	public boolean holds(T stuff){
-		int numberOfEnteries = ((String) stuff).length();
-		boolean found = false;
-		for(int index =0; !found && (index < numberOfEnteries); index++){
-			if(anEntry.equals(list[stuff]))
-				found = true;
+	public int[] search(Object[] x, Object object){
+		int[] temp = new int[x.length];
+		int oposite = 0;
+		int[] search = {};
+		for(int i = 0; i < x.length; i++){
+			if (x[i].equals(object)){
+				temp[oposite] = i;
+				oposite++;
+			}
 		}
-		return found;
+		search = new int[oposite];
+		for (int r = 0; r < oposite; r++){
+			search[r] = temp[r];
+		}
+		return search;
 	}
-
 	public static void main(String[] args) {
 		Assignment7<Integer> select = new Assignment7<Integer>();
 		int[] p = {2,7,3,4,1,8,6,9}; 
