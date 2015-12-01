@@ -1,6 +1,7 @@
 
 
-interface Elevate{
+
+interface Elevate<E>{
 	public void goUp();
 	public void goDown();
 	public int getFloor();
@@ -12,14 +13,14 @@ interface Elevate{
 	public boolean isEmpty();
 }
 
-public class Elevator{
+public class Elevator <E>{
 	private static int people;
-	public Elevator previous;
-	public Elevator next;
+	public E previous;
+	public E next;
 	
-	public Elevator(Elevator previous, int people, Elevator next){
+	public Elevator(E previous, int people, E next){
 		previous = null;
-		this.people = people;
+		Elevator.people = people;
 		this.next = null;
 	}
 
@@ -29,16 +30,16 @@ public class Elevator{
 	}
 
 
-	private static class Floors implements Elevate{
-		private Elevator head;
+	private static class Floors<E> implements Elevate<E>{
+		private Elevator<E> head;
 		private int floor;
 		private final int size;
 
 		//how many floors there are
 		public Floors(){
+			floor = 1;
 			head = null;
 			size = 17;
-			floor = 1;
 		}
 
 		public void goUp(){
@@ -46,7 +47,7 @@ public class Elevator{
 				head = new Elevator(null, people, null);
 			else{
 				Elevator newLink = new Elevator(null, people, head);
-				head.previous = newLink;
+				head.previous = (E) newLink;
 				head = newLink;
 			}
 			floor++;
@@ -56,7 +57,7 @@ public class Elevator{
 		public void goDown(){
 			if(head == null) 
 				return;
-			head = head.next;
+			head = (Elevator) head.next;
 			head.previous = null;
 			floor--;
 		}
@@ -66,7 +67,7 @@ public class Elevator{
 		}
 
 		public void goToFloor(int f){
-			while (floor != f){
+			while (floor != f && floor != size){
 				if(floor > f)
 					goDown();
 				else
@@ -94,11 +95,14 @@ public class Elevator{
 	}
 
 	public static void main(String[] args) {
+		Elevator elevatorone = new Elevator(1, 20, 2);
 		Floors floor = new Floors();
 		
-		floor.goUp();
-		floor.goUp();
+		//floor.goUp();
+		//floor.goUp();
 		System.out.println(floor.getFloor());
+		System.out.println(elevatorone.getPeople());
+		System.out.println(floor.isFull());
 	}
 
 }
