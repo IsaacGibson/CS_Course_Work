@@ -1,5 +1,6 @@
 
-
+import java.util.Random;
+import java.util.Scanner;
 
 interface Elevate<E>{
 	public void goUp();
@@ -23,6 +24,13 @@ public class Elevator <E>{
 		Elevator.people = people;
 		this.next = null;
 	}
+
+	
+	public Elevator(int people, Object next) {
+		this.people = people;
+		this.next = (E) next;
+	}
+
 
 	//gets the amount to people on elevator
 	public int getPeople(){
@@ -61,6 +69,9 @@ public class Elevator <E>{
 			head.previous = null;
 			floor--;
 		}
+		public int getTopFloor(){
+			return size;
+		}
 
 		public int getFloor(){
 			return floor;
@@ -95,14 +106,28 @@ public class Elevator <E>{
 	}
 
 	public static void main(String[] args) {
-		Elevator elevatorone = new Elevator(1, 20, 2);
+		Random people = new Random();
+		Scanner scan = new Scanner(System.in);
 		Floors floor = new Floors();
+		Elevator elevatorone = new Elevator(floor.getFloor(), people.nextInt(20), floor.getFloor());
+	
+		System.out.println("Welcome To my Elevator Game!!! \n"
+							+ "The point of the Game Is to reach the top floor (17) you must input a random number of people between 1-20 \n"
+							+ "If the Number is too many you will go down to the bottom floor, if right you advance to the next floor \n" 
+							+ "Each time you advance a floor a random number of people will be getting off. Good Luck!!!");
+		System.out.println("_________________________________________________________________________________________________________________");
+		while (floor.floor != floor.getTopFloor()){
+			System.out.println("Enter a random number of people: ");
+			int move = scan.nextInt();
+			if (elevatorone.people > move){
+				floor.goUp();
+				System.out.println("You are on floor " + floor.getFloor());
+			}
+		}
 		
-		//floor.goUp();
-		//floor.goUp();
-		System.out.println(floor.getFloor());
-		System.out.println(elevatorone.getPeople());
-		System.out.println(floor.isFull());
+		
+		
+		
 	}
 
 }
